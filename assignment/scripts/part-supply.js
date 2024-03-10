@@ -39,8 +39,26 @@ console.log('5. Add the value 25 into supplyChanges.',supplyChanges);
 //      - If the value is a negative number, push it into the 'negatives' array.
 //      - If the value is a zero, push it into the 'zeroes' array.
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
+ 
+let positives = [];
+let negatives = [];
+let zeroes = [];
 
-
+for (let i=0; i<=supplyChanges.length-1; i++) {
+  // if the values is positive push oneSupplychange into postive array
+  if (supplyChanges[i] > 0 ) {
+    positives.push(supplyChanges[i]);
+    // If the value is a negative number, push it into the 'negatives' array.
+  } else if (supplyChanges[i] < 0 ) {
+    negatives.push(supplyChanges[i]);
+    //      - If the value is a zero, push it into the 'zeroes' array.
+  }  else if (supplyChanges[i] === 0 ) {
+    zeroes.push(supplyChanges[i]);
+  } 
+}
+console.log('These are the positives in the supplyChanges array',positives);
+console.log('These are the negatives in the supplyChanges array',negatives);
+console.log('These are the zeroes in the supplyChanges array',zeroes);
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
