@@ -105,10 +105,33 @@ console.log('8. Looping through supplyChanges to calculate the sum:', totalParts
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
-
-
-
-
+// 82 boxes that each hold 7 parts
+// total number of parts equlas 572
+let parts = 572;
+let boxesFilled = 0;
+// run code whole the boxes filleed is less than 572
+ while (boxesFilled <= 572) {
+  // if the boxes filled is less than 572 add 7 to the value in boxes filled.
+if (boxesFilled < 572) {
+boxesFilled += 7;
+// determine if boxes filled is greater than 572 by subtracting the value in boxes filled minues 572.
+// console log the differnce 
+} else if (boxesFilled > 572){
+ let leftOver = boxesFilled - 572;
+ console.log('This is the remainder',leftOver)
+} 
+ }
+//  console.log('9.Filling boxes with a "while" loop',boxesFilled);
+// console.log(parts);
+// trying again
+while ( parts <= 572) {
+ if (parts > 0) {
+  boxesFilled += 1;
+parts -=7 ;
+} else if ( parts > 0 ) {
+   console.log('This is the remainder',parts)
+ } 
+}
 // DO NOT MODIFY
 // Used for automated testing
 try {
